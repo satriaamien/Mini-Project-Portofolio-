@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href='css\index.css'>
+</head>
+<body>
+    <header>
+        <navbar class="container">
+            <div class="navbar">
+                <!-- <img src="./assets/images.png" alt="beranda"> -->
+                <p>Traveller</p>
+                <div class="menu">
+                    <a href="#hero">Home</a>
+                    <a href="#ourPackage">Our Package</a>
+                    <a href="#CallUs">Call Us</a>
+                </div>
+            </div>
+        </navbar>
+        <!-- <hr class="line" style="margin-bottom: 10px;"> -->
+    </header>
+    <div class="wrap-banner">
+    <div class="banner">
+        <img class="img-banner" src="assets/pantai.jpeg" alt="person">
+        <img class="img-banner" src="assets/nature.jpg" alt="person">
+        <img class="img-banner" src="assets/road.jpg" alt="person">
+        <button class="btn-left" onclick="plusDiv(-1)"><i class="fa-solid fa-caret-left" style="font-size: 35px;"></i></button>
+        <button class="btn-right" onclick="plusDiv(+1)"><i class="fa-solid fa-caret-right" style="font-size: 35px;"></i></button>
+    </div>
+        <script>
+            function plusDiv(n){
+            showDivs(slideIndex += n)
+        }
+        var slideIndex=0
+        showDivs(slideIndex)
+
+        function showDivs(n){
+            var x =document.getElementsByClassName('img-banner')
+            if (n>=x.length) slideIndex=0;
+            else if (n<0) slideIndex=x.length-1;
+            for (var i=0; i<x.length; i++){
+                x[i].style.display = 'none'
+            }
+            x[slideIndex].style.display='flex'
+        }
+
+        setInterval(()=>{
+                plusDiv(+1)
+            },2000)
+
+    </script>
+    </div>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-title">
+                    <h1>Your Trusted Travel Agent</h1>
+                    <h6>Your Hapiness</h6>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <img src="assets/nature.jpg" alt="foto">
+                        <div class="about-content">
+                            <div class="content-caption">
+                                <i>"This agent is good for travelling"</i> 
+                            </div>
+                            <div class="content-person">
+                                <img src="assets/aku.jpeg" alt="person">
+                                <div class="person-info">
+                                    <h6>Satria Amien</h6>
+                                    <p>Front End Programmer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="line-about">
+                        <div class="about-information">
+                            <h6 class="information-title">Agen Travel telah memberikan layanan kepada 1.000+ pengguna dan tersebar diseluruh indonesia. 3 Manfaat yang kami berikan anda meliputi : </h6>
+                            <ul class="information-list">
+                                <li class="list-about">
+                                    <div class="list-number">1</div>
+                                    <p class="list-paragraf">Diskon untuk member akun baru </p>
+                                </li>
+                                <li class="list-about">
+                                    <div class="list-number">2</div>
+                                    <p class="list-paragraf">Murah dan terpercaya</p>
+                                </li>
+                                <li class="list-about">
+                                    <div class="list-number">3</div>
+                                    <p class="list-paragraf">Sedia melayani 24 Jam</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="contact-card">
+                            <div class="card-title">
+                                <h4 class="card-title-text">Contact Us</h4>
+                                <p class="card-title-text">Sales akan menghubungi apabila anda mengalami masalah</p>
+                            </div>
+                            <form action="" name="message-form" onsubmit="return validateForm()" id="form">
+                                <div class="contact-input">
+                                    <label  for="">Your Name:</label>
+                                    <input class="contact-form" type="text" name="nama" id="" placeholder="First and Last Name">
+                                    <label for="">Email Address:</label>
+                                    <input class="contact-form" type="text" name="email" id="" placeholder="example@email.com">
+                                    <label for="">What are you interested in?</label>
+                                    <select class="contact-form" name="" id="select-contact" >
+                                        <option value="none" selected disabled hidden>Select Option</option>
+                                        <option value="A" name="interest" >A</option>
+                                        <option value="B" name="interest" >B</option>
+                                        <option value="C" name="interest" > C</option>
+                                    </select>
+                                    <button type="submit" class="contact-btn">SEND</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="outside-package"  id="ourPackage">
+                <div class="package">
+                    <h1>Our Package</h1>
+                </div>
+            </div>
+            <div>
+                <div class="container">
+                    <div class="location">
+                        <div class="location-wrap">
+                            <ul class="ul-location">
+                                <li>
+                                   <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="list-location">
+                                        <div class="location-province">
+                                            <h4>Bali</h4>
+                                        </div>
+                                        <div class="location-state">
+                                            <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                     <div class="list-location">
+                                         <div class="location-province">
+                                             <h4>Japan</h4>
+                                         </div>
+                                         <div class="location-state">
+                                             <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <li>
+                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                     <div class="list-location">
+                                         <div class="location-province">
+                                             <h4>Singapore</h4>
+                                         </div>
+                                         <div class="location-state">
+                                             <p>This description supports and extends the bullet point above.</p>
+                                         </div>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </div>
+                        <hr class="line-about" style="width: 15%;">
+                        <div class="location-wrap">
+                            <ul class="ul-location">
+                                <li>
+                                   <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="list-location">
+                                        <div class="location-province">
+                                            <h4>Bali</h4>
+                                        </div>
+                                        <div class="location-state">
+                                            <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                     <div class="list-location">
+                                         <div class="location-province">
+                                             <h4>Japan</h4>
+                                         </div>
+                                         <div class="location-state">
+                                             <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <li>
+                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                     <div class="list-location">
+                                         <div class="location-province">
+                                             <h4>Singapore</h4>
+                                         </div>
+                                         <div class="location-state">
+                                             <p>This description supports and extends the bullet point above.</p>
+                                         </div>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="line">
+        <section>
+            <div class="container" id="CallUs"> 
+                <div class="closing">
+                    <div class="closing-wrap">
+                        <div class="closingGap closing-title">
+                            <h4>Hubungi Kami</h4>
+                        </div>
+                        <div class="closingGap closing-state">
+                            <p>Apabila anda mengalami kendala teknis klik tombol dibawah ini. kami akan menjawab 1x24 jam. Terimakasih telah menggunakan layanan kami.</p>
+                        </div>
+                        <div class="closingGap btn-closing">
+                            <button class="contact-btn">Call US</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr class="line">
+    <footer>
+        <div class="footer">
+            <div class="img-footer">
+                <img src="./assets/images.png" alt="footer">
+            </div>
+            <div class="footer">
+                <div class="footer-up">
+                    <p>Terms of service</p>
+                    <p>|</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="footer-down">
+                    <p>2019</p>
+                    <p>|</p>
+                    <p>by Agent Travel</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+        
+        function setValid(){
+            name,email,select  = '','',''            
+        }
+        function validateForm(){
+            var name = document.forms['message-form']['nama'].value
+            var email= document.forms['message-form']['email'].value
+            var e =document.getElementById('select-contact')
+            var select = e.value;
+            // var interest = document.forms['message-form']['interest'].value
+            if (name == ''  || email == '' || select == ''){
+                alert('Mohon Lengkapi Seluruh Isi Form')
+            }else if(!email.includes('@')){
+                alert('email tidak valid, masukkan @ pada isian form    ')
+            }else{
+                alert('Data Berhasil di input')
+                setValid(name,email,select)
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
