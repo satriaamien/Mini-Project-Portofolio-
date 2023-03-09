@@ -1,2 +1,2 @@
-# Mini-Projext-Portofolio-
+# Mini-Project-Portofolio-
 Mini Project 
